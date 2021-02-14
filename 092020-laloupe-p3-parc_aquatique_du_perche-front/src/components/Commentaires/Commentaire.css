@@ -1,0 +1,19 @@
+.globalApi {
+  display: flex;
+  flex-direction: column;
+  width: 50em;
+  height: 150px;
+  align-items: center;
+  color: rgba(54, 75, 110, 1);
+  border-color: rgba(54, 75, 110, 1);
+}
+
+.Com {
+  border: 2px rgba(54, 75, 110, 1) solid;
+  height: 80px;
+  width: 60%;
+  text-align: center;
+  border-radius: 10px;
+  font-family: "Hind Siliguri", sans-serif;
+  justify-content: space-evenly;
+}

@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+  background-color: #0093e9;
+  background-image: linear-gradient(225deg, #0093e9 0%, #fdfdfd 100%);
+}  */
+body {
+  background-color: #0093e9;
+  background-image: linear-gradient(200deg, #0093e9 0%, #fdfdfd 65%);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}

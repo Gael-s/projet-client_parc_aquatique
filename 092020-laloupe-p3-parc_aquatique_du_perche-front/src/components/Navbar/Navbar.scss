@@ -1,0 +1,26 @@
+.container__navbar {
+    .navbar {
+        display: flex;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+// iPads (portrait and landscape)
+
+@media screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    // .container__navbar {
+    //     display: none;
+    // }
+}
+
+
+
+// Smartphones (portrait and landscape)
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .container__navbar {
+        display: none;
+    }
+}

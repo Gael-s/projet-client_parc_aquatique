@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container-footer {
+  display: flex;
+  bottom: 0;
+  color: white;
+  background-color: rgb(37, 72, 131);
+  list-style: none;
+  width: 100%;
+  justify-content: space-evenly;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+.reseaux {
+  padding-top: 17px;
+  font-size: 15px;
+  font-family: "Hind Siliguri", sans-serif;
+  justify-content: space-around;
+}
+
+.contact {
+  justify-content: space-between;
+  padding-top: 18px;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+.list {
+  font-size: 15px;
+  padding-top: 22px;
+  list-style: none;
+}
+
+.iframe {
+  border-radius: 10px;
+}
+
+.mymap2 {
+  margin-right: 5px;
+  margin-bottom: 20px;
+  padding-top: 23px;
+}
+
+@media screen and (max-width: 480px) {
+  .iframe {
+    display: none;
+  }
+}

@@ -1,0 +1,29 @@
+.container__aquagym {
+  color: rgba(54, 75, 110, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  h1 {
+    font-size: 40px;
+  }
+  .tableau {
+    padding-right: 10%;
+  }
+  .opacite0 {
+    opacity: 0;
+  }
+  th {
+    width: 188px;
+    height: 90px;
+    text-align: center;
+  }
+  td {
+    width: 160px;
+    text-align: center;
+    
+  }
+  
+}

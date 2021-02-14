@@ -1,0 +1,42 @@
+.bloc-commentaire {
+  background-color: white;
+  width: 25%;
+  height: 300px;
+  padding: 20px;
+  border: 1px solid rgba(54, 75, 110, 1);
+  border-radius: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.commentaire-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 250px;
+  width: 300px;
+  color: rgba(54, 75, 110, 1);
+  font-size: 20px;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+.form-inputs {
+  border-color: rgba(54, 75, 110, 1);
+  z-index: 10;
+}
+
+.form-inputs1 input {
+  height: 80px;
+  width: 130%;
+}
+
+#name {
+  z-index: 10;
+}
+
+.envoi {
+  margin-left: 100px;
+  margin-top: 20px;
+}

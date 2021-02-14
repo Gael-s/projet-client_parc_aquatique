@@ -1,0 +1,113 @@
+.sidebar {
+  z-index: 1000;
+  width: 90px;
+  height: 80px;
+  height: 80px;
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.menu-bars {
+  color: rgba(54, 75, 110, 1);
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2rem;
+  background: none;
+}
+
+.menu-bars-cross {
+  color: rgba(54, 75, 110, 1);
+  margin-right: 6rem;
+  font-size: 2rem;
+  background: none;
+}
+
+.nav-menu {
+  position: absolute;
+  z-index: 1000;
+  background-color: white;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  transition: 850ms;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25);
+}
+
+.nav-menu.active {
+  left: 35%;
+  transition: 350ms;
+}
+
+.nav-text {
+  
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 8px 0px 8px 16px;
+  list-style: none;
+  height: 60px;
+
+}
+
+.nav-text a {
+  text-decoration: none;
+  color: rgba(54, 75, 110, 1);
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+.nav-text a:hover {
+  background-color: rgba(54, 75, 110, 1);
+  color: white;
+  // padding-right: 10%;
+  // padding-left: 10%;
+}
+
+.nav-menu-items {
+  width: 100%;
+}
+
+.navbar-toggle {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+span {
+  margin-left: 16px;
+}
+
+// iPads (portrait and landscape)
+
+@media screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  .sidebar {
+    display: none;
+  }
+  .nav-menu.active {
+    left: 70%;
+}
+}
+
+// Smartphones (portrait and landscape)
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .sidebar {
+    display: flex;
+  }
+  .nav-menu.active {
+    left: 40%;
+}
+}

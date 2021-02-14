@@ -1,0 +1,49 @@
+.container__tuile {
+  display: flex;
+  justify-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  perspective: 600px;
+  .tuile {
+    width: 100%;
+    height: 100%;
+    margin: 2%;
+    background-color: rgb(245, 245, 245);
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    border: solid 4px rgb(241, 241, 241);
+    border-radius: 65px;
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.25),
+      inset 3px 4px 14px rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+    .tuile_face {
+      .tuile_reserver {
+        font-size: 15px;
+      }
+      .tuile_place {
+        font-size: 12px;
+        color: rgb(212, 30, 30);
+      }
+      .tuile_complet {
+        transform: rotateZ(180deg);
+        
+      }
+    }
+    .tuile_front {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    .tuile_back {
+      backface-visibility: hidden;
+      transform: rotateY(180deg);
+      background-color: lime;
+    }
+  }
+  .tuile:hover {
+    transform: rotateX(180deg);
+    
+  }
+}

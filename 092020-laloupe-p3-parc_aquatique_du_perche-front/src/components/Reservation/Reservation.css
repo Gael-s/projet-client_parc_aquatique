@@ -1,0 +1,200 @@
+.position-relat {
+  position: relative;
+}
+
+.reservation-outline {
+  width: 100%;
+  padding: 15px 15px 15px 300px;
+  margin: 15px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: rgba(54, 75, 110, 1);
+  overflow: scroll;
+  outline: none;
+}
+
+.reservation-line {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.reservation-case {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 60px;
+  text-align: center;
+  margin: 5px 10px;
+}
+
+.tiles {
+  border: solid 1.5px #f0f0f0;
+  border-radius: 35px;
+  box-shadow: inset 0px 2px 5px 0px #606060, 0px 2px 5px 0px #606060;
+  padding: 10px 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+.color-red {
+  color: #dd2020;
+}
+
+.opacity-none {
+  opacity: 0;
+}
+
+.reservation-form {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  padding: 10px;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 0px 2px 5px 0px #606060;
+  border-radius: 15px;
+  z-index: 2;
+}
+
+.reservation-form h3 {
+  text-align: center;
+}
+
+.reservation-form .form-inputs {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.reservation-form .form-inputs .form-inputs-sides {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reservation-form .form-inputs .form-inputs-sides div {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reservation-form .form-inputs-sides:last-child {
+  width: 30%;
+}
+
+.reservation-form .form-inputs .form-inputs-sides div input {
+  width: 100px;
+  height: 20px;
+  margin-left: 5px;
+  border: rgb(200, 200, 200) solid 1px;
+  box-shadow: inset 0px 0px 3px 0px #606060;
+}
+
+.margin-right {
+  margin: 0 15px 0 0;
+}
+
+.form-bottom {
+  text-align: center;
+}
+
+.form-bottom h4 {
+  margin: 0 0 5px 0;
+}
+
+.form-bottom button {
+  width: 100px;
+  height: 25px;
+  border-radius: 15px;
+  margin: 10px 0 0 0;
+  box-shadow: inset 0px 0px 3px 0px #606060, 0px 0px 3px 0px #606060;
+  background-color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+.form-bottom button:hover {
+  transition: all ease-in 0.1s;
+  font-weight: bold;
+}
+
+.message-reserv {
+  font-size: large;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 450px) {
+  .reservation-outline {
+    padding: 0;
+    width: 100%;
+  }
+
+  .days {
+    width: 80px;
+  }
+
+  .reservation-form {
+    width: 70%;
+  }
+
+  .reservation-form .form-inputs .form-inputs-sides div input {
+    width: 150px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .reservation-outline {
+    overflow: hidden;
+    font-size: 18px;
+  }
+
+  .reservation-line {
+    width: 100%;
+  }
+
+  .reservation-line:first-child {
+    width: 150px;
+  }
+
+  .reservation-case {
+    width: 180px;
+  }
+
+  .color-red {
+    font-size: 16px;
+  }
+
+  .days {
+    width: 150px;
+  }
+
+  .reservation-form {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    padding: 15px;
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0px 2px 5px 0px #606060;
+    border-radius: 15px;
+  }
+}
