@@ -45,7 +45,7 @@ class Meteo extends React.Component {
       <div className="meteo-outline">
         {option ? (
           <div>
-            <h3>Météo des 3 prochains jours:</h3>
+            <h1 className="titre">Météo des 3 prochains jours:</h1>
             <div className="meteo-three">
               <div className="meteo-jour">
                 <p>{this.date(0)}</p>
@@ -78,7 +78,7 @@ class Meteo extends React.Component {
           </div>
         ) : (
           <div>
-            <h3>Météo du jour:</h3>
+            <h1 className="titre">Météo du jour:</h1>
             <div className="meteo-jour">
               <p>{this.date(0)}</p>
               <img

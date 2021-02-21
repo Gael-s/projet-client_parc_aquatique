@@ -1,16 +1,19 @@
 .meteo-outline {
-  height: auto;
-  padding: 14px;
-  margin: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: rgba(54, 75, 110, 1);
+  margin: 10%;
+  height: auto;
   font-weight: bolder;
-  margin-bottom:200px;
-  margin-top:100px;
-  font-family: "Hind Siliguri", sans-serif;
+}
+
+.titre {
+  display: flex;
+  justify-content: center;
+  line-height: 38px;
+  font-size: 32px;
 }
 
 .meteo-three {
@@ -24,7 +27,6 @@
 
 .meteo-jour {
   font-size: 18px;
-  margin-bottom: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,18 +38,18 @@
   height: 75px;
 }
 
-.meteo-jour:nth-child(2) {
-  margin: 0 25px 5px 25px;
-}
+
 
 .meteoBtn {
-  font-size: 15px;
-  padding: 5px;
-  outline: none;
-  color: rgba(54, 75, 110, 1);
-  border: #0093e9 solid 5px;
+  border: 2px rgba(54, 75, 110, 1) solid;
+  background-color: rgb(10, 26, 54);
+  color: white;
+  border-color: rgb(99, 131, 187);
+  width: 16em;
+  height: 30px;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  outline: none;
 }
 
 @media screen and (min-width: 1024px) {

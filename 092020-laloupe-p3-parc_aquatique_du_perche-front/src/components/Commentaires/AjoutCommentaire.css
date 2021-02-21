@@ -1,6 +1,6 @@
 .bloc-commentaire {
   background-color: white;
-  width: 50%;
+  width: 65%;
   height: auto;
   padding: 20px;
   border: 2px solid rgba(54, 75, 110, 1);
@@ -28,10 +28,14 @@
 
 .form-inputs1 input {
   height: 80px;
-  width: 130%;
+  width: 100%;
 }
 
 .button {
-  margin-left: 100px;
-  margin-top: 20px;
+  display: flex;
+  align-self: center;
+  justify-content: space-around;
+  width: 20%;
+  margin: 5%;
+  outline: none;
 }

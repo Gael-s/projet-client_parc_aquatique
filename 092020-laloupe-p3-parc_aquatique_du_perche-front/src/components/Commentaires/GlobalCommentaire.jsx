@@ -8,8 +8,7 @@ const GlobalCommentaire = () => {
   return (
     <div className="Comment">
       <div className="Avis">
-        <h2>Votre avis compte!</h2>
-        <h3>Aidez-nous à améliorer la qualité de nos services</h3>
+        <h2>Laissez votre commentaire</h2>
       </div>
       <div className="Commentaires">
         <Commentaires />

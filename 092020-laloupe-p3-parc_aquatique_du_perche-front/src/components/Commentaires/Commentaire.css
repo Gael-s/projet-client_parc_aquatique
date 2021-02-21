@@ -13,9 +13,10 @@
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-  padding: 15%;
-  height: 80px;
+  padding: 2%;
+  height: 10%;
   width: 100%;
+  line-height: 24px;
   border: 2px rgba(54, 75, 110, 1) solid;
   border-radius: 10px;
 }
