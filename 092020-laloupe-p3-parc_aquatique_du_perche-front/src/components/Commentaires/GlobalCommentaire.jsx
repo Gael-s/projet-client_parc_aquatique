@@ -12,14 +12,8 @@ const GlobalCommentaire = () => {
         <h3>Aidez-nous à améliorer la qualité de nos services</h3>
       </div>
       <div className="Commentaires">
-      <div>
         <Commentaires />
-      </div>
-
-      <div>
         <Commentaires />
-      </div>
-
       <button
         type="submit"
         className="button1"

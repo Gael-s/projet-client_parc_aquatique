@@ -22,7 +22,7 @@ const Commenter = () => {
           </div>
         </div>
 
-        <button className="envoi" type="button">
+        <button className="button" type="button">
           Envoyer
         </button>
       </div>

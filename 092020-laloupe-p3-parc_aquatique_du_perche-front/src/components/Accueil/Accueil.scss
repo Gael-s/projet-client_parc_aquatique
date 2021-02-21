@@ -1,0 +1,17 @@
+.container__Acceuil {
+  display: flex;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .container__Acceuil {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .container__Acceuil {
+    display: flex;
+    flex-direction: column;
+  }
+}

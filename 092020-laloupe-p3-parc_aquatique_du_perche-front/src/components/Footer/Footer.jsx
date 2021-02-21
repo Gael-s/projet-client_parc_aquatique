@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import PropTypes from "prop-types";
-import facebook from "./icone.png";
+import facebook from "./facebook.png";
 import trip from "./tripadvisor.png";
 
 const Footer = ({ admin }) => {
@@ -9,10 +9,7 @@ const Footer = ({ admin }) => {
     <>
       {admin && (
         <section className="container-footer">
-          {/* Column1 */}
           <div className="reseaux">
-            <h3>Suivez-nous sur les réseaux sociaux</h3>
-            <br />
             <a
               className="social"
               href="https://fr-fr.facebook.com/pages/category/Public-Swimming-Pool/Parc-Aquatique-du-Perche-396648667456552/"
@@ -27,24 +24,21 @@ const Footer = ({ admin }) => {
               target="_blank"
               rel="noreferrer"
             >
-              <img alt="logo facebook" src={trip} />
+              <img alt="logo trip advisor" src={trip} />
             </a>
           </div>
-
-          {/* Column2 */}
           <div className="contact">
             <h3>Contacts</h3>
             <div className="list">
               <div>5 Rue de la Ferrière, 28240 Fontaine-Simon</div>
-              <br />
               <div>02 37 81 88 79</div>
-              <div>parc-aquatique-du-perche@orange.fr</div>
+              <a href="mailto:parc-aquatique-du-perche@orange.fr" className="email">
+                parc-aquatique-du-perche@orange.fr
+              </a>
             </div>
           </div>
-
-          {/* Column3 */}
-          <div className="mymap">
-            <div className="mymap2">
+          <div className="map">
+            
               <iframe
                 title="myframe"
                 className="iframe"
@@ -55,7 +49,7 @@ const Footer = ({ admin }) => {
                 allowFullScreen=""
                 aria-hidden="false"
               />
-            </div>
+            
           </div>
         </section>
       )}

@@ -1,50 +1,65 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .container-footer {
   display: flex;
-  bottom: 0;
-  color: white;
-  background-color: rgb(37, 72, 131);
-  list-style: none;
-  width: 100%;
   justify-content: space-evenly;
-  font-family: "Hind Siliguri", sans-serif;
+  list-style: none;
+  color: white;
+  background-color: rgba(54, 75, 110, 1);
+  bottom: 0;
+  width: 100%;
 }
 
 .reseaux {
-  padding-top: 17px;
-  font-size: 15px;
-  font-family: "Hind Siliguri", sans-serif;
+  display: flex;
   justify-content: space-around;
+  align-items: center;
+  margin: 15px;
+  width: 15%;
 }
 
 .contact {
-  justify-content: space-between;
-  padding-top: 18px;
-  font-family: "Hind Siliguri", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 15px;
+}
+
+.email {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.email:hover {
+  color: blue;
 }
 
 .list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
   font-size: 15px;
-  padding-top: 22px;
   list-style: none;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .iframe {
   border-radius: 10px;
 }
 
-.mymap2 {
-  margin-right: 5px;
-  margin-bottom: 20px;
-  padding-top: 23px;
+.map {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 15px;
 }
 
 @media screen and (max-width: 480px) {
   .iframe {
     display: none;
+  }
+  .reseaux {
+    flex-direction: column;
   }
 }
