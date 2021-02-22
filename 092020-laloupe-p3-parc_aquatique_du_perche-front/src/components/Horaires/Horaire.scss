@@ -1,7 +1,30 @@
 .container__horaire {
-    background-color: lightseagreen;
+    width: 100%;
+    height: 200px;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 3%;
+    background-color: rgba(255, 255, 255, 0.918);
     h1 {
-        height: 200px;
         width: auto;
+    }
+    table {
+        margin: 10%;
+        width: 100%;
+        line-height: 24px;
+        font-size: 18px;
+        border: 1px solid ;
+        border-collapse: collapse;
+        
+    }
+    
+    td {
+        border: 1px solid black;
+        font-weight: bold;
+        width: 50%;
+        padding: 2%;
+
+
+
     }
 }

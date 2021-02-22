@@ -16,8 +16,8 @@ const Accueil = () => {
       <GlobalCommentaire />
       </div>
       <div>
-      <Meteo />
       <Horaire />
+      <Meteo />
       </div>
     </div>
     </>

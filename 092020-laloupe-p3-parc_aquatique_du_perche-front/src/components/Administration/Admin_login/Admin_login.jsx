@@ -13,6 +13,7 @@ function AdminLogin() {
   });
 
   const [isLogin, setIsLogin] = useState(false);
+  const [message, setMessage] = useState();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,9 +26,12 @@ function AdminLogin() {
     })
       .then((res) => res.json())
       .then((res) => {
-        alert(res.message)
+        setMessage(res.message);
+        setTimeout(() => {
+          setMessage();
+        }, 2000);
         if (res.status === "Success") {
-          localStorage.setItem('token', res.token);
+          localStorage.setItem("token", res.token);
           <LoginContext.Provider value={isLogin}>
             {setIsLogin(true)}
           </LoginContext.Provider>;
@@ -39,6 +43,8 @@ function AdminLogin() {
     <div className="containerlogin">
       <div className="menu_admin" />
       <div className="container__adminlogin">
+        {!message ? null : <div className="message">{message}</div>}
+
         <div className="container__logo">
           <img src={logo} alt="logo" className="logo" />
           <h1>Page d&apos;administration</h1>
@@ -46,14 +52,17 @@ function AdminLogin() {
         {!isLogin && (
           <form className="container__login" onSubmit={handleSubmit}>
             <input
+              title="rentrez un e mail valide"
               type="text"
               name="name"
               id="name"
               placeholder="Identifiant"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}"
               value={userData.user}
               onChange={(e) =>
                 setUserData({ user: e.target.value, pass: userData.pass })}
               autoComplete="on"
+              required
             />
             <input
               type="password"
@@ -64,6 +73,7 @@ function AdminLogin() {
               onChange={(e) =>
                 setUserData({ pass: e.target.value, user: userData.user })}
               autoComplete="on"
+              required
             />
             <button type="submit">Connexion</button>
           </form>

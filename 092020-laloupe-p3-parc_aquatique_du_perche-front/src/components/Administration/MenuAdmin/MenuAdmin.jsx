@@ -6,22 +6,27 @@ import "./MenuAdmin.scss";
 
 function MenuAdmin() {
   const [isLogin, setisLogin] = useState(true);
+  const [message, setMessage] = useState();
 
   const unSubmit = () => {
-    localStorage.removeItem('token');
+    localStorage.removeItem("token");
+    setMessage("utilisateur deconnecté");
     <LoginContext.Provider value={isLogin}>
       {setisLogin(false)}
-      {alert("utilisateur deconnecté")}
     </LoginContext.Provider>;
+    setTimeout(() => {
+      setMessage();
+    }, 2000);
   };
 
   return (
     <>
+      {!message ? null : <div className="message">{message}</div>}
       <nav className="menuAdmin">
-        <Link to="/">
-          <button type="submit" onClick={unSubmit}>
-            Déconnexion
-          </button>
+        <Link to="/" delay={2000}>
+        <button type="submit" onClick={unSubmit}>
+          Déconnexion
+        </button>
         </Link>
         <ul>
           <li>

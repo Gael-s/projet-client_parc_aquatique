@@ -17,25 +17,31 @@ function NewAdmin() {
     setpassConfirmation(e.target.value);
   };
 
+  const [message, setMessage] = useState();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (passConfirmation !== newAdmin.pass) {
-      alert("vérifier votre mot de passe");
-    }
-    else {
+      setMessage("vérifier votre mot de passe");
+
+      // alert("vérifier votre mot de passe");
+    } else {
       fetch("http://localhost:5000/Admin/new", {
         method: "POST",
         headers: new Headers({
           "Content-Type": "application/json",
-          'Authorization': localStorage.getItem('token'),
+          Authorization: localStorage.getItem("token"),
         }),
         body: JSON.stringify(newAdmin),
       })
         .then((res) => res.json())
         .then((res) => {
           setpassConfirmation("");
-          setNewAdmin({user:"", pass:""});
-          alert(res.message);
+          setNewAdmin({ user: "", pass: "" });
+          setMessage(res.message);
+          setTimeout(() => {
+            setMessage();
+          }, 2000);
         });
     }
   };
@@ -49,20 +55,26 @@ function NewAdmin() {
       >
         <h1>Création d&apos;un nouvel administrateur</h1>
         <input
-          type="text"
+          title="rentrez un e mail valide"
+          type="email"
           name="user"
-          placeholder="nom d'utilisateur"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}"
+          placeholder="e-mail"
           value={newAdmin.user}
           autoComplete="on"
           onChange={updateField}
+          required
         />
         <input
+          title="Votre mot de passe doit contenir au moins 8 caractères dont une minuscule, une majuscule, un caractère spécial (-+!*$@%_) et un chiffre"
           type="password"
           name="pass"
           placeholder="mot de passe"
+          pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[-+!*$@%_])([-+!*$@%_\w]{8,15})$"
           value={newAdmin.pass}
           autoComplete="on"
           onChange={updateField}
+          required
         />
         <input
           type="password"
@@ -71,7 +83,9 @@ function NewAdmin() {
           autoComplete="off"
           value={passConfirmation}
           onChange={updatePassConfirmationField}
+          required
         />
+        {!message ? null : <div className="message">{message}</div>}
         <button type="submit">Valider</button>
       </form>
     </>
