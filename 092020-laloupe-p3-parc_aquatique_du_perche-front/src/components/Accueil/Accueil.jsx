@@ -11,11 +11,11 @@ const Accueil = () => {
   return (
     <>
     <div className="container__Acceuil">
-      <div>
+      <div className="divAcceuil">
       <Tarif />
       <GlobalCommentaire />
       </div>
-      <div>
+      <div className="divAcceuil">
       <Horaire />
       <Meteo />
       </div>

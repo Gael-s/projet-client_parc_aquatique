@@ -6,6 +6,7 @@
   color: rgba(54, 75, 110, 1);
   margin: 10%;
   height: auto;
+  width: 100%;
   font-weight: bolder;
 }
 
@@ -14,6 +15,7 @@
   justify-content: center;
   line-height: 38px;
   font-size: 32px;
+  margin-bottom: 10%;
 }
 
 .meteo-three {
@@ -23,6 +25,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin: 5%;
 }
 
 .meteo-jour {
@@ -31,14 +34,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 5%;
 }
 
 .meteoIMG {
   width: 75px;
   height: 75px;
+  margin: 10%;
 }
-
-
 
 .meteoBtn {
   border: 2px rgba(54, 75, 110, 1) solid;
@@ -50,6 +53,7 @@
   border-radius: 10px;
   font-weight: bold;
   outline: none;
+  margin: 30px;
 }
 
 @media screen and (min-width: 1024px) {

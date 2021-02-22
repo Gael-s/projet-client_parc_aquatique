@@ -1,33 +1,51 @@
-import React from "react";
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import React, { useState } from "react";
 import "./AjoutCommentaire.css";
 
-const Commenter = () => {
+function Commentaire() {
+  const [data, setData] = useState({
+    prenom : "",
+    notation : "",
+    Commentaire: ""
+  })
+
+  const updateData = (e) => {
+    setData(e.target.value);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(data);
+  };
+
+
+
   return (
     <div className="bloc-commentaire">
-      <div className="commentaire-form">
-        <div className="form-inputs">
+      <form className="commentaire-form" onSubmit={handleSubmit}>
+        <div>
           <div>
-            <p>Prénom :</p>
-            <input />
+            <div>Prénom</div>
+            <input className="form-inputs" onChange={updateData} />
           </div>
           <div>
-            <p>E-mail :</p>
-            <input />
+            <div>Notations</div>
+            <div className="etoile" onChange={updateData}>⭐ ⭐ ⭐ ⭐ ⭐</div>
           </div>
-          <div className="form-inputs1">
           <div>
-            <p>Votre commentaire :</p>
-            <input />
-          </div>
+            <div>
+              <div>Commentaire</div>
+              <input className="form-inputs_commentaire" onChange={updateData} />
+            </div>
           </div>
         </div>
 
-        <button className="button" type="button">
+        <button className="button" type="submit">
           Envoyer
         </button>
-      </div>
+      </form>
     </div>
   );
-};
+}
 
-export default Commenter;
+export default Commentaire;

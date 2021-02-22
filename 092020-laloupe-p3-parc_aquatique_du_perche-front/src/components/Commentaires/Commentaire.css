@@ -16,7 +16,7 @@
   background-color: rgba(255, 255, 255, 0.918);
 
   padding: 2%;
-  height: 10%;
+  height: auto;
   width: 100%;
   line-height: 24px;
   border: 2px rgba(54, 75, 110, 1) solid;
