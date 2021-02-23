@@ -5,7 +5,7 @@ const { PRIVATEKEY } = require('../env');
 module.exports = (req, res, next) => {
     let bearerHeader = req.headers.authorization;
     if (bearerHeader === undefined) {
-        return res.status(403).json({ message: "Non authorizé" })
+        return res.status(403).json({ message: "Non authorisé" })
     }
     if (bearerHeader.substring(0, 7) === "Bearer ") {
         bearerHeader = bearerHeader.substring(7);
@@ -14,7 +14,7 @@ module.exports = (req, res, next) => {
     if (decoded.admin) {
         return next();
     }
-    return res.status(403).json({ message: "Non authorizé" })
+    return res.status(403).json({ message: "Non authorisé" })
 }
 
 

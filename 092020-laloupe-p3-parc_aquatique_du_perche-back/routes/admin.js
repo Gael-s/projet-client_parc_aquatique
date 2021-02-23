@@ -29,7 +29,7 @@ const getToken = () => {
 // }
 
 
-// Ajout d'un adminisrateur sur la route /Admin/newadmin
+// Ajout d'un adminisrateur sur la route /Admin/new
 router.post("/new", isAdmin, (req, res) => {
 
   const users = {

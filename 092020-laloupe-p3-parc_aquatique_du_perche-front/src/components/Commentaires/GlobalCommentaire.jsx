@@ -26,7 +26,7 @@ function GlobalCommentaire()  {
       </div>
       <div className="Commentaires">
         {comments.map((item) => (
-        <Commentaires {...item}  />
+        <Commentaires {...item} key={item.id} />
       ))}
         <button
           type="button"

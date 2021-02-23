@@ -23,8 +23,6 @@ function NewAdmin() {
     e.preventDefault();
     if (passConfirmation !== newAdmin.pass) {
       setMessage("vérifier votre mot de passe");
-
-      // alert("vérifier votre mot de passe");
     } else {
       fetch("http://localhost:5000/Admin/new", {
         method: "POST",

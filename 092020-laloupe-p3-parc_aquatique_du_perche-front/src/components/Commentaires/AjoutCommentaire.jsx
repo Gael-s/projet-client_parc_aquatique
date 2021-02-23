@@ -6,16 +6,31 @@ import "./AjoutCommentaire.css";
 function Commentaire() {
   const [data, setData] = useState({
     prenom : "",
-    notation : "",
-    Commentaire: ""
+    Comment: "",
+    // notation : ""
   })
+  const [message, setMessage] = useState();
+
 
   const updateData = (e) => {
-    setData(e.target.value);
+    setData(() => ({ ...data, [e.target.name]: e.target.value }));
   };
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(data);
+    fetch("http://localhost:5000/usercomments/newcomment", {
+      method: "POST",
+      headers: new Headers({
+        'Accept': 'application/json',
+        "Content-Type": "application/json",
+      }),
+      body: JSON.stringify(data),
+    })
+    .then((res) => res.json())
+    .then((res) => {
+      setMessage(res.message);
+      
+    });
   };
 
 
@@ -26,7 +41,7 @@ function Commentaire() {
         <div>
           <div>
             <div>Prénom</div>
-            <input className="form-inputs" onChange={updateData} />
+            <input name="prenom" type="text" className="form-inputs" value={data.prenom} onChange={updateData} required />
           </div>
           <div>
             <div>Notations</div>
@@ -35,11 +50,11 @@ function Commentaire() {
           <div>
             <div>
               <div>Commentaire</div>
-              <input className="form-inputs_commentaire" onChange={updateData} />
+              <input name="comment" type="text" className="form-inputs_commentaire" value={data.comment} onChange={updateData} required />
             </div>
           </div>
         </div>
-
+        {!message ? null : <div className="messageB">{message}</div>}
         <button className="button" type="submit">
           Envoyer
         </button>

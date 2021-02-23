@@ -44,7 +44,6 @@ function AdminLogin() {
       <div className="menu_admin" />
       <div className="container__adminlogin">
         {!message ? null : <div className="message">{message}</div>}
-
         <div className="container__logo">
           <img src={logo} alt="logo" className="logo" />
           <h1>Page d&apos;administration</h1>

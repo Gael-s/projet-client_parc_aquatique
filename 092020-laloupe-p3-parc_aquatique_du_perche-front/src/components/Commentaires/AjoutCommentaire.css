@@ -37,6 +37,20 @@
   margin-bottom: 3%;
 }
 
+.messageB {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  transition: opacity 0.5s 0s ease;
+  padding: 10px;
+  background-color: #364b6e;
+  color: white;
+  font-size: 19px;
+  line-height: 25px;
+  height: 10%;
+  width: 40%;
+}
+
 .button {
   display: flex;
   align-self: center;
