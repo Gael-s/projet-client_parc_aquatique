@@ -44,10 +44,9 @@
 }
 
 .meteoBtn {
-  border: 2px rgba(54, 75, 110, 1) solid;
+  border: rgb(60, 150, 255) 2px solid;
   background-color: rgb(10, 26, 54);
   color: white;
-  border-color: rgb(99, 131, 187);
   width: 16em;
   height: 30px;
   border-radius: 10px;

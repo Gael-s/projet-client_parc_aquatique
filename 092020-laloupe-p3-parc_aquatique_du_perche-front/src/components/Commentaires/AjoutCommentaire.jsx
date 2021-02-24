@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from "react";
+
 import "./AjoutCommentaire.css";
 
 function Commentaire() {
@@ -10,6 +11,7 @@ function Commentaire() {
     // notation : ""
   })
   const [message, setMessage] = useState();
+  
 
 
   const updateData = (e) => {
@@ -28,8 +30,7 @@ function Commentaire() {
     })
     .then((res) => res.json())
     .then((res) => {
-      setMessage(res.message);
-      
+      setMessage(res.message);      
     });
   };
 

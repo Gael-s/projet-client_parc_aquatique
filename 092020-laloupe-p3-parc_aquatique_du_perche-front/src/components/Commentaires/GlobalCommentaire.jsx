@@ -12,10 +12,7 @@ function GlobalCommentaire()  {
   useEffect(() => {
     fetch("http://localhost:5000/usercomments")
     .then((data) => data.json())
-    // .then((data) => console.log(data))
     .then((data) => setComments(data))
-
-    // console.log(comments)
   }, [])
   
 
@@ -26,7 +23,7 @@ function GlobalCommentaire()  {
       </div>
       <div className="Commentaires">
         {comments.map((item) => (
-        <Commentaires {...item} key={item.id} />
+        <Commentaires {...item} key={item.prenom} />
       ))}
         <button
           type="button"
