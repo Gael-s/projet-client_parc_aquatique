@@ -18,6 +18,9 @@ import AdminAquagym from "./components/Administration/Admin_aquagym/AdminAquagym
 import MenuAdmin from "./components/Administration/MenuAdmin/MenuAdmin";
 import NewAdmin from "./components/Administration/New_admin/NewAdmin";
 import Footer from "./components/Footer/Footer";
+import AdminCommentaires from "./components/Administration/Admin_Commentaires/AdminCommentaires";
+import AdminTarif from "./components/Administration/Admin_Tarifs/AdminTarif";
+import AdminHoraires from "./components/Administration/Admin_Horaires/AdminHoraires";
 
 function App() {
   const location= useLocation();
@@ -45,6 +48,10 @@ function App() {
           <Route path="/Admin/new" component={NewAdmin} />
           <Route path="/Admin/Actualites" component={AdminActualites} />
           <Route path="/Admin/Aquagym" component={AdminAquagym} />
+          <Route path="/Admin/Commentaire" component={AdminCommentaires} />
+          <Route path="/Admin/Tarifs" component={AdminTarif} />
+          <Route path="/Admin/Horaires" component={AdminHoraires} />
+
         </Switch>
         <Footer admin={!location.pathname.startsWith("/Admin")} />
       </main>

@@ -24,14 +24,24 @@ function MenuAdmin() {
       {!message ? null : <div className="message">{message}</div>}
       <nav className="menuAdmin">
         <Link to="/" delay={2000}>
-        <button type="submit" onClick={unSubmit}>
-          Déconnexion
-        </button>
+          <button type="submit" onClick={unSubmit}>
+            Déconnexion
+          </button>
         </Link>
         <ul>
           <li>
             <Link to="/Admin/new">
-              <span>new admin</span>
+              <span>Créer un nouvel administrateur</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/Admin/Tarifs">
+              <span>Tarifs</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/Admin/Horaires">
+              <span>Horaires</span>
             </Link>
           </li>
           <li>
@@ -52,6 +62,11 @@ function MenuAdmin() {
           <li>
             <Link to="/Admin/Aquagym">
               <span>Aquagym</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/Admin/Commentaire">
+              <span>Gestion des commentaires</span>
             </Link>
           </li>
         </ul>

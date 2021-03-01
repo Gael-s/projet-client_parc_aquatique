@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
 
 import "./Tarif.scss";
 
 function Tarif() {
+  // const [message, setMessage] = useState();
+  const [tarif, setTarif] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/tarif")
+      .then((data) => data.json())
+      .then((data) => setTarif(data[0]));
+  }, []);
+  console.log(tarif);
+
+
   return (
     <div className="container__tarif">
       <h1>Tarifs</h1>
@@ -21,27 +33,27 @@ function Tarif() {
 
           <tr>
             <td>Adulte</td>
-            <td>4 €</td>
+            <td>{tarif.adulte} €</td>
           </tr>
 
           <tr>
             <td>Enfant - 16 ans</td>
-            <td>3,20 €</td>
+            <td>{tarif.enfant} €</td>
           </tr>
 
           <tr>
             <td>Enfant de moins de 3 ans</td>
-            <td>Gratuit</td>
+            <td>{tarif.enfant_3_ans !== 0 ? <div>{tarif.enfant_3_ans} €</div> : "Gratuit"}</td>
           </tr>
 
           <tr>
             <td>Sauna et hammam</td>
-            <td>10 €</td>
+            <td>{tarif.sauna_et_hammam} €</td>
           </tr>
 
           <tr>
             <td>Abonnement 10 entrées sauna/hammam</td>
-            <td>75 €</td>
+            <td>{tarif.abonnement_sauna} €</td>
           </tr>
         </tbody>
       </table>
@@ -50,15 +62,16 @@ function Tarif() {
         <tbody>
           <tr>
             <td>Adulte</td>
-            <td>4,70 €</td>
+            <td>{tarif.adultEte} €</td>
           </tr>
 
           <tr>
             <td>Enfant - 16 ans</td>
-            <td>3,70 €</td>
+            <td>{tarif.enfantEte} €</td>
           </tr>
         </tbody>
       </table>
+      {/* {!message ? null : <div className="message">{message}</div>} */}
     </div>
   );
 }

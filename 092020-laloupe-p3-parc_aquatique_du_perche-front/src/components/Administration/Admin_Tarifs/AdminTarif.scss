@@ -1,0 +1,55 @@
+.container__form_tarifs {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1%;
+  margin-bottom: 5%;
+  margin-left: 15%;
+  color: #364b6e;
+  width: auto;
+  table {
+    margin: 5%;
+    width: 100%;
+    line-height: 24px;
+    font-size: 18px;
+    border: 1px solid;
+    border-collapse: collapse;
+    .lignecolore {
+      background-color: #364b6e;
+      color: white;
+    }
+    td {
+      border: 1px solid #364b6e;
+      font-weight: bold;
+      width: 300px;
+      padding: 2%;
+      text-align: center;
+      input {
+        margin: 2%;
+        width: 75%;
+        height: 35px;
+        text-align: center;
+      }
+    }
+  }
+  button {
+    display: flex;
+    justify-content: center;
+    border: none;
+    text-decoration: none;
+    outline-style: none;
+    background-color: #364b6e;
+    color: white;
+    outline-style: none;
+    width: auto;
+    margin: 10px;
+    font-size: 24px;
+    padding: 2%;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
