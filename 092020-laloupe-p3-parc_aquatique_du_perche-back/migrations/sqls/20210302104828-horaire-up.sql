@@ -1,0 +1,33 @@
+/* Replace with your SQL commands */
+CREATE TABLE `parc_aquatique`.`horaire` (
+  `id` INT NOT NULL,
+  `lundi_AM_open` TIME,
+  `lundi_AM_close` TIME,
+  `lundi_PM_open` TIME,
+  `lundi_PM_close` TIME,
+  `mardi_AM_open` TIME,
+  `mardi_AM_close` TIME,
+  `mardi_PM_open` TIME,
+  `mardi_PM_close` TIME,
+  `mercredi_AM_open` TIME,
+  `mercredi_AM_close` TIME,
+  `mercredi_PM_open` TIME,
+  `mercredi_PM_close` TIME,
+  `jeudi_AM_open` TIME,
+  `jeudi_AM_close` TIME,
+  `jeudi_PM_open` TIME,
+  `jeudi_PM_close` TIME,
+  `vendredi_AM_open` TIME,
+  `vendredi_AM_close` TIME,
+  `vendredi_PM_open` TIME,
+  `vendredi_PM_close` TIME,
+  `samedi_AM_open` TIME,
+  `samedi_AM_close` TIME,
+  `samedi_PM_open` TIME,
+  `samedi_PM_close` TIME,
+  `dimanche_AM_open` TIME,
+  `dimanche_AM_close` TIME,
+  `date_modif` TIMESTAMP DEFAULT current_timestamp,
+  PRIMARY KEY (`id`));
+
+  INSERT INTO `parc_aquatique`.`horaire` (`id`, `lundi_AM_open`, `lundi_AM_close`, `lundi_PM_open`, `lundi_PM_close`, `mardi_AM_open`, `mardi_AM_close`, `mardi_PM_open`, `mardi_PM_close`, `mercredi_AM_open`, `mercredi_AM_close`, `mercredi_PM_open`, `mercredi_PM_close`, `jeudi_AM_open`, `jeudi_AM_close`, `jeudi_PM_open`, `jeudi_PM_close`, `vendredi_AM_open`, `vendredi_AM_close`, `vendredi_PM_open`, `vendredi_PM_close`, `samedi_AM_open`, `samedi_AM_close`, `samedi_PM_open`, `samedi_PM_close`, `dimanche_AM_open`, `dimanche_AM_close`) VALUES ('1', '10:00', '12:00', '14:00', '18:00', '9:00', '12:00', '14:00', '19:00', '9:00', '12:00', '14:00', '19:00', '9:00', '12:00', '14:00', '18:00', '9:00', '12:00', '14:00', '19:00', '9:00', '12:00', '13:30', '19:00', '10:00', '12:00');

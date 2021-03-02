@@ -3,7 +3,7 @@
   width: 60%;
   height: auto;
   padding: 20px;
-  border: 4px solid rgba(54, 75, 110, 1);
+  border: 4px solid rgb(60, 150, 255);
   border-radius: 30px;
   position: absolute;
   left: 50%;
@@ -58,7 +58,7 @@
   align-items: center;
   margin: 5%;
   outline: none;
-  border: 2px rgba(54, 75, 110, 1) solid;
+  border: 2px rgb(60, 150, 255) solid;
   background-color: rgb(10, 26, 54);
   color: white;
   border-color: rgb(99, 131, 187);

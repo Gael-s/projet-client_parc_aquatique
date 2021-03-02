@@ -1,3 +1,4 @@
+/* eslint-disable no-else-return */
 const router = require("express").Router();
 
 const bcrypt = require('bcryptjs');
@@ -54,7 +55,6 @@ router.post("/new", isAdmin, (req, res) => {
 });
 
 // Connection administrateur sur la route /Admin
-// eslint-disable-next-line consistent-return
 router.post("/", bodyParser.json(), (req, res) => {
   const users = {
     user: req.body.user,
@@ -89,7 +89,7 @@ router.post("/", bodyParser.json(), (req, res) => {
           data: users.user,
           token,
         })
-      // eslint-disable-next-line no-else-return
+      
       } else {
         return res.status(403).json({
           message: "Erreur de connexion, vérifier votre mot de passe ou votre login"
@@ -103,5 +103,15 @@ router.post("/", bodyParser.json(), (req, res) => {
 //     message: "get admin acces",
 //   })
 // })
+
+// Lister tous les admin
+router.get("/", (req, res) => {
+res.send("hello list admin")
+})
+
+// supprimer un admin
+router.delete("/", (req, res) => {
+  res.send("hello delete admin")
+  })
 
 module.exports = router;

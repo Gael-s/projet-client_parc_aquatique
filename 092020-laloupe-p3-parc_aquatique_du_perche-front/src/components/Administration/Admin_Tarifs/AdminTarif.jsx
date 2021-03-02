@@ -21,10 +21,15 @@ function AdminTarif() {
       .then((data) => data.json())
       .then((data) => setTarif(data[0]));
   }, []);
-
   const updateField = (e) => {
     setNewTarif(() => ({ ...newTarif, [e.target.name]: e.target.value }));
   };
+
+  function refreshPage() {
+    setTimeout(() => {
+      window.location.reload(false);
+    }, 2000);
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -49,8 +54,7 @@ function AdminTarif() {
   return (
     <div className="container__form_tarifs">
       <h1>Modifier les tarifs</h1>
-      <div>date de mise à jour : </div>
-      {!message ? null : <div className="message">{message}</div>}
+      <div>date de mise à jour : {tarif.date_modif} </div>
       <form action="submit" onSubmit={handleSubmit}>
         <table>
           <tbody>
@@ -210,7 +214,8 @@ function AdminTarif() {
             </tr>
           </tbody>
         </table>
-        <button type="submit">Valider les changements</button>
+        {!message ? null : <div className="message">{message}</div>}
+        <button type="submit" onClick={refreshPage}>Valider les changements</button>
       </form>
     </div>
   );

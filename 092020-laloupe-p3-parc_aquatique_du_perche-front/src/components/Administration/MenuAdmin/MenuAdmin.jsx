@@ -31,7 +31,7 @@ function MenuAdmin() {
         <ul>
           <li>
             <Link to="/Admin/new">
-              <span>Créer un nouvel administrateur</span>
+              <span>Administrateurs</span>
             </Link>
           </li>
           <li>
@@ -56,7 +56,7 @@ function MenuAdmin() {
           </li>
           <li>
             <Link to="/Admin/Actualites">
-              <span>Acualités</span>
+              <span>Actualités</span>
             </Link>
           </li>
           <li>
@@ -66,7 +66,7 @@ function MenuAdmin() {
           </li>
           <li>
             <Link to="/Admin/Commentaire">
-              <span>Gestion des commentaires</span>
+              <span>Commentaires</span>
             </Link>
           </li>
         </ul>

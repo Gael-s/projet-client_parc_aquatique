@@ -1,57 +1,79 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from "react";
+import ReactStars from "react-rating-stars-component";
 
 import "./AjoutCommentaire.css";
 
 function Commentaire() {
   const [data, setData] = useState({
-    prenom : "",
+    prenom: "",
     Comment: "",
-    // notation : ""
-  })
+    notation: "",
+  });
   const [message, setMessage] = useState();
-  
 
+  const ratingChanged = (newRating) => {
+    setData({ notation: newRating });
+    console.log(newRating);
+  };
 
   const updateData = (e) => {
     setData(() => ({ ...data, [e.target.name]: e.target.value }));
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(data);
     fetch("http://localhost:5000/usercomments/newcomment", {
       method: "POST",
       headers: new Headers({
-        'Accept': 'application/json',
+        Accept: "application/json",
         "Content-Type": "application/json",
       }),
       body: JSON.stringify(data),
     })
-    .then((res) => res.json())
-    .then((res) => {
-      setMessage(res.message);      
-    });
+      .then((res) => res.json())
+      .then((res) => {
+        setMessage(res.message);
+      });
   };
-
-
 
   return (
     <div className="bloc-commentaire">
       <form className="commentaire-form" onSubmit={handleSubmit}>
         <div>
           <div>
-            <div>Prénom</div>
-            <input name="prenom" type="text" className="form-inputs" value={data.prenom} onChange={updateData} required />
+            <div>Notations</div>
+            <div className="etoile">
+              <ReactStars
+                count={5}
+                onChange={ratingChanged}
+                size={32}
+                activeColor="#ffd700"
+              />
+            </div>
           </div>
           <div>
-            <div>Notations</div>
-            <div className="etoile" onChange={updateData}>⭐ ⭐ ⭐ ⭐ ⭐</div>
+            <div>Prénom</div>
+            <input
+              name="prenom"
+              type="text"
+              className="form-inputs"
+              value={data.prenom}
+              onChange={updateData}
+              required
+            />
           </div>
           <div>
             <div>
               <div>Commentaire</div>
-              <input name="comment" type="text" className="form-inputs_commentaire" value={data.comment} onChange={updateData} required />
+              <input
+                name="comment"
+                type="text"
+                className="form-inputs_commentaire"
+                value={data.comment}
+                onChange={updateData}
+                required
+              />
             </div>
           </div>
         </div>

@@ -32,6 +32,19 @@
       }
     }
   }
+  .message {
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    transition: opacity 0.5s 0s ease;
+    padding: 10px;
+    background-color: #364B6E;
+    color: white;
+    font-size: 19px;
+    line-height: 25px;
+    height: 10%;
+    width: 20%;
+}
   button {
     display: flex;
     justify-content: center;
