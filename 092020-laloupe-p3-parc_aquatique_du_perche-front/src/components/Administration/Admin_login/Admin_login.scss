@@ -61,7 +61,7 @@
   .message {
     display: flex;
     justify-content: center;
-    align-self: flex-end;
+    align-self: center;
     transition: opacity 0.5s 0s ease;
     padding: 10px;
     background-color: #364B6E;
@@ -69,7 +69,7 @@
     font-size: 19px;
     line-height: 25px;
     height: 10%;
-    width: 20%;
+    width: auto;
 }
 
 }

@@ -8,7 +8,6 @@
     width: 100%;
     height: auto;
     margin: 2%;
-
   }
 }
 
@@ -16,15 +15,21 @@
   .container__Acceuil {
     display: flex;
     flex-direction: column;
+    .divAcceuil {
+      width: auto;
+    }
     div {
-      margin: 5%;
+      margin: 2%;
     }
   }
 }
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   .container__Acceuil {
     display: flex;
     flex-direction: column;
+    .divAcceuil {
+      width: auto;
+    }
   }
 }

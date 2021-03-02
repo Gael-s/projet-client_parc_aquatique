@@ -43,7 +43,6 @@ function AdminLogin() {
     <div className="containerlogin">
       <div className="menu_admin" />
       <div className="container__adminlogin">
-        {!message ? null : <div className="message">{message}</div>}
         <div className="container__logo">
           <img src={logo} alt="logo" className="logo" />
           <h1>Page d&apos;administration</h1>
@@ -77,6 +76,7 @@ function AdminLogin() {
             <button type="submit">Connexion</button>
           </form>
         )}
+        {!message ? null : <div className="message">{message}</div>}
         {isLogin ? <MenuAdmin /> : null}
       </div>
     </div>

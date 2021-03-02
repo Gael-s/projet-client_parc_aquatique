@@ -83,8 +83,8 @@ function NewAdmin() {
           onChange={updatePassConfirmationField}
           required
         />
-        {!message ? null : <div className="message">{message}</div>}
         <button type="submit">Valider</button>
+        {!message ? null : <div className="message">{message}</div>}
       </form>
     </>
   );
