@@ -3,6 +3,7 @@ require("dotenv").config();
 
 const db = require("../db_connection");
 
+// Récuperer les commentaires
 router.get("/", (req, res) => {
   db.query("SELECT prenom, comment, notation FROM usercomments", [
     req.query.type,
@@ -30,5 +31,20 @@ router.post("/newcomment", (req, res) => {
     }
   );
 });
+
+// Suppression d'un commentaire
+router.delete("/deletecomment", (req, res) => {
+  const comments ={
+    prenom: req.body.prenom
+  }
+  db.query(
+    "DELETE FROM usercomments WHERE prenom= ?", [comments.prenom],
+    (error, response) => {
+      if (error) {res.status(500).json({ message: "erreur pour supprimer le commentaires"})} else if (response) {
+        return res.status(200).json({ message: "Commentaire supprimé"})
+      }
+    }
+  )
+})
 
 module.exports = router;

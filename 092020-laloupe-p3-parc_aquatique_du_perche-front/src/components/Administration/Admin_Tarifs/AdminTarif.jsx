@@ -77,7 +77,7 @@ function AdminTarif() {
                   onChange={updateField}
                   // value={newTarif.adulte}
                   required
-                />{" "}
+                />
                 €
               </td>
             </tr>
@@ -95,7 +95,7 @@ function AdminTarif() {
                   onChange={updateField}
                   // value={newTarif.enfant}
                   required
-                />{" "}
+                />
                 €
               </td>
             </tr>
@@ -113,7 +113,7 @@ function AdminTarif() {
                   onChange={updateField}
                   // value={newTarif.enfant_3_ans}
                   required
-                />{" "}
+                />
                 €
               </td>
             </tr>
@@ -131,7 +131,7 @@ function AdminTarif() {
                   onChange={updateField}
                   // value={newTarif.sauna_et_hammam}
                   required
-                />{" "}
+                />
                 €
               </td>
             </tr>
@@ -149,7 +149,7 @@ function AdminTarif() {
                   onChange={updateField}
                   // value={newTarif.abonnement_sauna}
                   required
-                />{" "}
+                />
                 €
               </td>
             </tr>
@@ -167,7 +167,7 @@ function AdminTarif() {
                   onChange={updateField}
                   // value={newTarif.cours}
                   required
-                />{" "}
+                />
                 €
               </td>
             </tr>
@@ -190,7 +190,7 @@ function AdminTarif() {
                   onChange={updateField}
                   // value={newTarif.adulteEte}
                   required
-                />{" "}
+                />
                 €
               </td>
             </tr>
@@ -208,7 +208,7 @@ function AdminTarif() {
                   onChange={updateField}
                   // value={newTarif.enfantEte}
                   required
-                />{" "}
+                />
                 €
               </td>
             </tr>

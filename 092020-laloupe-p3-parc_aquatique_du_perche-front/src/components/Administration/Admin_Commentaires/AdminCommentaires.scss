@@ -1,12 +1,12 @@
-.container__form_tarifs {
+.container__adminCommentaire {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 1%;
-  margin-bottom: 5%;
-  margin-left: 15%;
+  margin-left: 5%;
   color: #364b6e;
-  width: auto;
+  h1 {
+    margin: 5%;
+  }
   table {
     margin: 5%;
     width: 100%;
@@ -22,10 +22,10 @@
       border: 1px solid #364b6e;
       font-weight: bold;
       width: 300px;
-      padding: 2%;
+      padding: 1%;
       text-align: center;
       input {
-        margin: 2%;
+        margin: 1%;
         width: 75%;
         height: 35px;
         text-align: center;
@@ -51,13 +51,13 @@
     border: none;
     text-decoration: none;
     outline-style: none;
-    background-color: #364b6e;
+    background-color: #ff0000;
     color: white;
     outline-style: none;
     width: auto;
     margin: 10px;
-    font-size: 18px;
-    padding: 1% 5%;
+    font-size: 16px;
+    padding: 3% 8%;
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
@@ -66,8 +66,23 @@
       0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   button:active {
-    background-color: #477ddb;
+    background-color: #ff9d00;
     box-shadow: 0 5px rgb(151, 149, 149);
     transform: translateY(4px);
   }
+  .message {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    transition: opacity 0.5s 0s ease;
+    padding: 1% 5%;
+    background-color: #364B6E;
+    color: white;
+    font-size: 16px;
+    line-height: 25px;
+    height: 10%;
+    width: auto;
+  }
 }
+
+

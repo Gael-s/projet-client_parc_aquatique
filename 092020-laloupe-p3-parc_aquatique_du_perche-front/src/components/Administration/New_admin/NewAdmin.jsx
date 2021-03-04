@@ -4,6 +4,7 @@ import "./NewAdmin.scss";
 
 function NewAdmin() {
   const [passConfirmation, setpassConfirmation] = useState("");
+  const [message, setMessage] = useState();
   const [newAdmin, setNewAdmin] = useState({
     user: "",
     pass: "",
@@ -16,8 +17,6 @@ function NewAdmin() {
   const updatePassConfirmationField = (e) => {
     setpassConfirmation(e.target.value);
   };
-
-  const [message, setMessage] = useState();
 
   const handleSubmit = (e) => {
     e.preventDefault();

@@ -12,6 +12,13 @@ function Commentaire() {
     notation: "",
   });
   const [message, setMessage] = useState();
+  const [display, setDisplay] = useState(true);
+
+  function refreshPage() {
+    setTimeout(() => {
+      window.location.reload(false);
+    }, 2000);
+  }
 
   const ratingChanged = (newRating) => {
     setData({ notation: newRating });
@@ -34,55 +41,63 @@ function Commentaire() {
       .then((res) => res.json())
       .then((res) => {
         setMessage(res.message);
+        setTimeout(() => {
+          setMessage();
+          setDisplay(false);
+        }, 2000);
       });
   };
 
   return (
-    <div className="bloc-commentaire">
-      <form className="commentaire-form" onSubmit={handleSubmit}>
-        <div>
-          <div>
-            <div>Notations</div>
-            <div className="etoile">
-              <ReactStars
-                count={5}
-                onChange={ratingChanged}
-                size={32}
-                activeColor="#ffd700"
-              />
-            </div>
-          </div>
-          <div>
-            <div>Prénom</div>
-            <input
-              name="prenom"
-              type="text"
-              className="form-inputs"
-              value={data.prenom}
-              onChange={updateData}
-              required
-            />
-          </div>
-          <div>
+    <>
+      {display ? (
+        <div className="bloc-commentaire">
+          <form className="commentaire-form" onSubmit={handleSubmit}>
             <div>
-              <div>Commentaire</div>
-              <input
-                name="comment"
-                type="text"
-                className="form-inputs_commentaire"
-                value={data.comment}
-                onChange={updateData}
-                required
-              />
+              <div>
+                <div>Notations</div>
+                <div className="etoile">
+                  <ReactStars
+                    count={5}
+                    onChange={ratingChanged}
+                    size={32}
+                    activeColor="#ffd700"
+                  />
+                </div>
+              </div>
+              <div>
+                <div>Prénom</div>
+                <input
+                  name="prenom"
+                  type="text"
+                  className="form-inputs"
+                  value={data.prenom}
+                  onChange={updateData}
+                  required
+                />
+              </div>
+              <div>
+                <div>
+                  <div>Commentaire</div>
+                  <input
+                    name="comment"
+                    type="text"
+                    className="form-inputs_commentaire"
+                    value={data.comment}
+                    onChange={updateData}
+                    required
+                  />
+                </div>
+              </div>
             </div>
-          </div>
+            {!message ? null : <div className="messageB">{message}</div>}
+            <button className="button" type="submit" onClick={refreshPage}>
+              Envoyer
+            </button>
+          </form>
         </div>
-        {!message ? null : <div className="messageB">{message}</div>}
-        <button className="button" type="submit">
-          Envoyer
-        </button>
-      </form>
-    </div>
+      ) : null}
+    </>
   );
 }
 

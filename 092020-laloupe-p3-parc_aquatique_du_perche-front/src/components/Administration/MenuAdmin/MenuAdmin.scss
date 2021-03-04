@@ -27,19 +27,28 @@
   background-color: rgba(54, 75, 110, 1);
   text-align: center;
   button {
+    display: flex;
+    justify-content: center;
     border: none;
     text-decoration: none;
     outline-style: none;
-    background-color: lightgrey;
+    background-color: #ffffff;
+    color: rgba(54, 75, 110, 1);
     outline-style: none;
-    width: 100px;
-    margin: 30px;
-    padding: 5px;
+    width: auto;
+    margin: 10px;
+    font-size: 18px;
+    padding: 1% 5%;
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  button:active {
+    box-shadow: 0 5px rgb(151, 149, 149);
+    transform: translateY(4px);
   }
 
   ul {
