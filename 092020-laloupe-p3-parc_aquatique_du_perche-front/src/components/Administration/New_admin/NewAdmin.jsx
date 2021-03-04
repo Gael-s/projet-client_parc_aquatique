@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "./NewAdmin.scss";
 
@@ -9,6 +9,24 @@ function NewAdmin() {
     user: "",
     pass: "",
   });
+  const [adminList, setAdminList] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/Admin/list", {
+      method: "GET",
+      headers: new Headers({
+        "Content-Type": "application/json",
+        // Authorization: localStorage.getItem("token"),
+      }),
+      // body: JSON.stringify(adminList),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        setAdminList(res)
+      });
+  }, []);
+
+console.log(adminList)
 
   const updateField = (e) => {
     setNewAdmin(() => ({ ...newAdmin, [e.target.name]: e.target.value }));

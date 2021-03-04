@@ -3,12 +3,15 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 2%;
-  .logo {
-    width: 35%;
-    height: auto;
-    position: relative;
-    top: 4%;
-    margin-left: 5%;
+  a{
+    .logo {
+      width: 500px;
+      height: auto;
+      position: relative;
+      top: 4%;
+      margin-left: 5%;
+    }
+
   }
   .photo_acceuil {
     height: 250px;
@@ -22,11 +25,13 @@
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .container__header {
-    .logo {
-      height: 100px;
-      width: auto;
-      top: 5%;
-      left: 10%;
+    a{
+      .logo {
+        height: 100px;
+        width: auto;
+        top: 5%;
+        left: 10%;
+      }
     }
     .photo_acceuil {
       height: 150px;
@@ -38,10 +43,12 @@
 
 @media screen and (max-width: 480px) {
   .container__header {
-    .logo {
-      width : 170px;
-      top: 2%;
-      left: 5%;
+    a {
+      .logo {
+        width : 170px;
+        top: 2%;
+        left: 5%;
+      }
     }
     .photo_acceuil {
       display: none;

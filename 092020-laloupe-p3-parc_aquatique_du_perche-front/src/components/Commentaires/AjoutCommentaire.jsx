@@ -79,9 +79,11 @@ function Commentaire() {
               <div>
                 <div>
                   <div>Commentaire</div>
-                  <input
+                  <textarea
                     name="comment"
                     type="text"
+                    rows="5"
+                    cols="33"
                     className="form-inputs_commentaire"
                     value={data.comment}
                     onChange={updateData}

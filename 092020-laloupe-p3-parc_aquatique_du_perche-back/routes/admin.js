@@ -104,7 +104,7 @@ router.post("/", bodyParser.json(), (req, res) => {
 // })
 
 // Lister tous les admin
-router.get("/", (req, res) => {
+router.get("/list", (req, res) => {
   connection.query("SELECT user FROM user_admin", [req.query.type])
     .then((data) => res.status(200).json(data))
     .catch((err) =>

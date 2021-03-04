@@ -34,3 +34,8 @@
   outline: none;
   margin: 3%;
 }
+.button1:active {
+  background-color: #477ddb;
+  box-shadow: 0 5px rgb(151, 149, 149);
+  transform: translateY(4px);
+}
