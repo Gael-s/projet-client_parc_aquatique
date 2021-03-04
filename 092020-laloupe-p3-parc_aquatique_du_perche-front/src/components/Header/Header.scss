@@ -41,8 +41,9 @@
 
 // Smartphones (portrait and landscape)
 
-@media screen and (max-width: 480px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 668px) {
   .container__header {
+    width: 100%;
     a {
       .logo {
         width : 170px;

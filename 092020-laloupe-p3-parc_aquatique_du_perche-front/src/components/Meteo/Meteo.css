@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   color: rgba(54, 75, 110, 1);
-  margin: 10%;
+  margin: 2%;
   height: auto;
   width: 100%;
   font-weight: bolder;
@@ -19,7 +19,7 @@
   line-height: 38px;
   font-size: 32px;
   margin-bottom: 10%;
-  width: 400px;
+  width: 100%;
 }
 
 .meteo-three {
@@ -39,6 +39,7 @@
   justify-content: center;
   align-items: center;
   margin: 5%;
+  width: 100%;
 }
 
 .meteoIMG {

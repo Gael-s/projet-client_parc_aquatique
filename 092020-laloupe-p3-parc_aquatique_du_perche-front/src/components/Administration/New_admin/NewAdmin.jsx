@@ -107,8 +107,8 @@ function NewAdmin() {
         {!message ? null : <div className="message">{message}</div>}
       </form>
       <div>
+        <h1>Supprimer un administrateur</h1>
         <div className="container__adminCommentaire">
-          <h1>Supprimer un administrateur</h1>
           <form action="submit">
             <table>
               <tbody>
