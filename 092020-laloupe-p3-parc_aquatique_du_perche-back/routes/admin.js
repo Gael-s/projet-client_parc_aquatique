@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const jwt = require("jsonwebtoken");
 const isAdmin = require("../middlewares/adminAcces");
 
-const { connection } = require("../db_connection");
+const connection = require("../db_connection");
 const { PRIVATEKEY } = require("../env");
 
 const getToken = () => {
@@ -114,7 +114,24 @@ router.get("/list", (req, res) => {
 
 // supprimer un admin
 router.delete("/delete", (req, res) => {
-  res.send("hello delete admin");
+  const admin = {
+    user: req.body.user
+  }
+  connection.query(
+    "DELETE FROM user_admin WHERE user= ?",
+    [admin.user],
+    (error, response) => {
+      if (error) {
+        res
+          .status(500)
+          .json({ message: "erreur pour supprimer l'utilisateur'" });
+      } else if (response) {
+        return res.status(200).json({ message: "Utilisateur supprimé" });
+      }
+    }
+  );
+  
 });
+
 
 module.exports = router;

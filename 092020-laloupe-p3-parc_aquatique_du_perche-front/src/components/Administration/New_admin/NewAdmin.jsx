@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+import ListerAdmin from "./ListerAdmin";
+
 import "./NewAdmin.scss";
 
 function NewAdmin() {
@@ -22,11 +24,9 @@ function NewAdmin() {
     })
       .then((res) => res.json())
       .then((res) => {
-        setAdminList(res)
+        setAdminList(res);
       });
   }, []);
-
-console.log(adminList)
 
   const updateField = (e) => {
     setNewAdmin(() => ({ ...newAdmin, [e.target.name]: e.target.value }));
@@ -57,18 +57,21 @@ console.log(adminList)
           setTimeout(() => {
             setMessage();
           }, 2000);
+          setTimeout(() => {
+            window.location.reload(false);
+          }, 2000);
         });
     }
   };
 
   return (
     <>
+      <h1>Création d&apos;un nouvel administrateur</h1>
       <form
         action="submit"
         className="formulaireNewAdmin"
         onSubmit={handleSubmit}
       >
-        <h1>Création d&apos;un nouvel administrateur</h1>
         <input
           title="rentrez un e mail valide"
           type="email"
@@ -103,6 +106,23 @@ console.log(adminList)
         <button type="submit">Valider</button>
         {!message ? null : <div className="message">{message}</div>}
       </form>
+      <div>
+        <div className="container__adminCommentaire">
+          <h1>Supprimer un administrateur</h1>
+          <form action="submit">
+            <table>
+              <tbody>
+                <tr className="lignecolore">
+                  <td>e-mail</td>
+                </tr>
+                {adminList.map((item) => (
+                  <ListerAdmin {...item} key={item.user} />
+                ))}
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </div>
     </>
   );
 }
